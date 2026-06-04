@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Entre em contato com o Suricatos Anônimos - Redação, sugestões, parcerias e mais.">
+    <title>Contato | Suricatos Anônimos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos adicionais específicos para a página de contato */
+        .contact-hero {
+            text-align: center;
+            margin: 48px 0 32px;
+        }
+        
+        .contact-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #000;
+        }
+        
+        .contact-hero p {
+            font-size: 1.1rem;
+            color: #4a4a4a;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 48px 0 64px;
+        }
+        
+        .contact-info {
+            background: #FBFBFB;
+            border-radius: 24px;
+            padding: 36px;
+            border: 1px solid #EDEDED;
+        }
+        
+        .contact-info h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #000;
+        }
+        
+        .contact-details {
+            margin-bottom: 32px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid #E8E8E8;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-icon {
+            font-size: 1.8rem;
+            min-width: 48px;
+            text-align: center;
+        }
+        
+        .contact-content {
+            flex: 1;
+        }
+        
+        .contact-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: #888;
+            margin-bottom: 4px;
+        }
+        
+        .contact-value {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #000;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-value:hover {
+            color: #3a3a3a;
+        }
+        
+        .social-links {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 2px solid #E8E8E8;
+        }
+        
+        .social-links h3 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .social-icon {
+            width: 44px;
+            height: 44px;
+            background: #F0F0F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #000;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        
+        .social-icon:hover {
+            background: #000;
+            color: #FFF;
+            transform: translateY(-2px);
+        }
+        
+        .contact-form {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 36px;
+            border: 1px solid #EDEDED;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        
+        .contact-form h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #000;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #2c2c2c;
+            font-size: 0.9rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #D9D9D9;
+            border-radius: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            background: #FFFFFF;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.05);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .btn-submit {
+            background: #000;
+            color: #FFF;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+        
+        .btn-submit:hover {
+            background: #2c2c2c;
+            transform: translateY(-1px);
+        }
+        
+        .feedback-message {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            text-align: center;
+            display: none;
+        }
+        
+        .feedback-message.success {
+            background: #E8F5E9;
+            color: #2E7D32;
+            border: 1px solid #A5D6A7;
+            display: block;
+        }
+        
+        .feedback-message.error {
+            background: #FFEBEE;
+            color: #C62828;
+            border: 1px solid #EF9A9A;
+            display: block;
+        }
+        
+        .info-note {
+            background: #F8F8F8;
+            border-left: 4px solid #000;
+            padding: 16px 20px;
+            border-radius: 12px;
+            margin-top: 24px;
+        }
+        
+        .info-note p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info,
+            .contact-form {
+                padding: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER FIXO (mesmo do index) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="index.html" class="logo">Suricatos Anônimos</a>
+                <span class="slogan">Notícias do Brasil, Chile e do mundo.</span>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="#">Brasil</a></li>
+                    <li><a href="#">Chile</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Imigração</a></li>
+                    <li><a href="#">Mundo</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- Hero da página de contato -->
+            <div class="contact-hero">
+                <h1>Fale com a redação</h1>
+                <p>Envie suas sugestões, denúncias, dúvidas ou parcerias. Estamos sempre abertos ao diálogo.</p>
+            </div>
+
+            <!-- Grid principal: informações de contato + formulário -->
+            <div class="contact-grid">
+                
+                <!-- Lado esquerdo: Informações de contato -->
+                <div class="contact-info">
+                    <h2>📬 Contatos diretos</h2>
+                    
+                    <div class="contact-details">
+                        <!-- Email -->
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-content">
+                                <div class="contact-label">E-mail principal</div>
+                                <a href="mailto:contatodevorbit@gmail.com" class="contact-value">contatodevorbit@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Responsável -->
+                        <div class="contact-item">
+                            <div class="contact-icon">👤</div>
+                            <div class="contact-content">
+                                <div class="contact-label">Editor responsável</div>
+                                <div class="contact-value">Gilderlan Silva</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Telefone (informativo) -->
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-content">
+                                <div class="contact-label">Redação (whatsapp)</div>
+                                <div class="contact-value">+55 (11) 99999-9999</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Horário de atendimento -->
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div class="contact-content">
+                                <div class="contact-label">Atendimento</div>
+                                <div class="contact-value">Segunda a Sexta, 9h às 18h (BRT)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Redes sociais -->
+                    <div class="social-links">
+                        <h3>Nossas redes</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">𝕏</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">📘</a>
+                            <a href="#" class="social-icon">📷</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-note">
+                        <p>✉️ Para press releases, pautas ou sugestões de reportagem, utilize nosso e-mail oficial. Respondemos em até 48h úteis.</p>
+                    </div>
+                </div>
+                
+                <!-- Lado direito: Formulário de contato -->
+                <div class="contact-form">
+                    <h2>✍️ Envie uma mensagem</h2>
+                    
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nome">Nome completo *</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione...</option>
+                                <option value="Sugestão de pauta">Sugestão de pauta</option>
+                                <option value="Denúncia / Reportagem">Denúncia / Reportagem</option>
+                                <option value="Parceria comercial">Parceria comercial</option>
+                                <option value="Dúvida / Crítica">Dúvida / Crítica</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">Enviar mensagem →</button>
+                        
+                        <div id="formFeedback" class="feedback-message"></div>
+                    </form>
+                    
+                    <div class="info-note" style="margin-top: 20px;">
+                        <p>🔒 Seus dados estão seguros. Não compartilhamos informações com terceiros.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (mesmo estilo do index) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="#">Sobre</a>
+                <a href="contato.html">Contato</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Suricatos Anônimos — Informação com seriedade e independência. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu Mobile (mesmo funcionamento do index)
+        const menuToggle = document.getElementById('menuToggle');
+        const navList = document.getElementById('navList');
+        
+        if (menuToggle && navList) {
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+            
+            const navLinks = navList.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                });
+            });
+        }
+        
+        // Formulário de contato com validação e simulação de envio
+        const contactForm = document.getElementById('contactForm');
+        const feedbackDiv = document.getElementById('formFeedback');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Coleta os valores
+                const nome = document.getElementById('nome').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const assunto = document.getElementById('assunto').value;
+                const mensagem = document.getElementById('mensagem').value.trim();
+                
+                // Validação simples
+                if (!nome || !email || !assunto || !mensagem) {
+                    feedbackDiv.textContent = '⚠️ Por favor, preencha todos os campos obrigatórios.';
+                    feedbackDiv.className = 'feedback-message error';
+                    setTimeout(() => {
+                        feedbackDiv.style.display = 'none';
+                        feedbackDiv.className = 'feedback-message';
+                    }, 4000);
+                    return;
+                }
+                
+                if (!email.includes('@') || !email.includes('.')) {
+                    feedbackDiv.textContent = '⚠️ Por favor, insira um e-mail válido.';
+                    feedbackDiv.className = 'feedback-message error';
+                    setTimeout(() => {
+                        feedbackDiv.style.display = 'none';
+                        feedbackDiv.className = 'feedback-message';
+                    }, 4000);
+                    return;
+                }
+                
+                // Simula envio bem-sucedido (sem backend)
+                feedbackDiv.textContent = '✅ Mensagem enviada com sucesso! Responderemos em até 48h.';
+                feedbackDiv.className = 'feedback-message success';
+                
+                // Limpa o formulário
+                contactForm.reset();
+                
+                // Remove mensagem após 5 segundos
+                setTimeout(() => {
+                    feedbackDiv.style.display = 'none';
+                    feedbackDiv.className = 'feedback-message';
+                }, 5000);
+            });
+        }
+        
+        // Adicionar classe active no link de contato
+        const currentLocation = window.location.pathname;
+        const navItemLinks = document.querySelectorAll('.nav-list a');
+        navItemLinks.forEach(link => {
+            if (link.getAttribute('href') === 'contato.html' && currentLocation.includes('contato.html')) {
+                link.style.borderBottomColor = '#000';
+                link.style.fontWeight = '600';
+            }
+        });
+    </script>
+</body>
+</html>

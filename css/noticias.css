@@ -1,0 +1,271 @@
+/* css/noticia.css */
+/* Estilos específicos para páginas de artigo/notícia */
+
+.article-container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+}
+
+/* Header da notícia */
+.article-header {
+    margin-bottom: 40px;
+    border-bottom: 2px solid #F0F0F0;
+    padding-bottom: 24px;
+}
+
+.article-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.article-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #000;
+    letter-spacing: -0.02em;
+}
+
+.article-meta {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+    color: #6B6B6B;
+    border-top: 1px solid #F0F0F0;
+    padding-top: 20px;
+}
+
+.article-date, .article-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Imagem principal */
+.article-featured-image {
+    margin: 32px 0 40px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #F5F5F5;
+}
+
+.article-featured-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-caption {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    color: #777;
+    background: #FAFAFA;
+    border-top: 1px solid #EEEEEE;
+}
+
+/* Conteúdo do artigo */
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #1A1A1A;
+}
+
+.article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.article-content strong {
+    font-weight: 700;
+    color: #000;
+}
+
+.article-content em {
+    font-style: italic;
+    color: #4a4a4a;
+}
+
+/* Citações */
+.article-content blockquote {
+    border-left: 4px solid #000;
+    margin: 2rem 0;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    font-style: italic;
+    font-weight: 500;
+    color: #2c2c2c;
+    background: #F9F9F9;
+    padding: 1rem 1rem 1rem 2rem;
+    border-radius: 12px;
+}
+
+/* Destaques */
+.highlight-box {
+    background: #F8F8F8;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 32px 0;
+    border-left: 4px solid #000;
+}
+
+.highlight-box h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* Tags */
+.article-tags {
+    margin: 48px 0 32px;
+    padding-top: 32px;
+    border-top: 1px solid #EEEEEE;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #F0F0F0;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: #000;
+    color: #FFF;
+}
+
+/* Compartilhamento */
+.share-section {
+    margin: 32px 0;
+    padding: 24px 0;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.share-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.share-btn {
+    padding: 8px 20px;
+    background: #F0F0F0;
+    border: none;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: #333;
+}
+
+.share-btn:hover {
+    background: #000;
+    color: #FFF;
+}
+
+/* Notícias relacionadas */
+.related-news {
+    margin-top: 64px;
+}
+
+.related-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #E5E5E5;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.related-card {
+    background: #FFF;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #F0F0F0;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.related-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.related-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.related-card-content {
+    padding: 16px;
+}
+
+.related-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.related-card-date {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .article-container {
+        padding: 20px 16px 48px;
+    }
+    
+    .article-title {
+        font-size: 1.8rem;
+    }
+    
+    .article-content {
+        font-size: 1rem;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-title {
+        font-size: 1.5rem;
+    }
+    
+    .article-meta {
+        gap: 16px;
+    }
+}

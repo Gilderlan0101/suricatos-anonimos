@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Suricatos Anônimos - Notícias do Brasil, Chile e do mundo. Informação séria, organizada e profissional.">
+    <title>Suricatos Anônimos | Notícias do Brasil, Chile e Mundo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER FIXO -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <a href="/" class="logo">Suricatos Anônimos</a>
+                <span class="slogan">Notícias do Brasil, Chile e do mundo.</span>
+            </div>
+            <nav class="main-nav">
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+                <ul class="nav-list" id="navList">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Brasil</a></li>
+                    <li><a href="#">Chile</a></li>
+                    <li><a href="#">Economia</a></li>
+                    <li><a href="#">Tecnologia</a></li>
+                    <li><a href="#">Imigração</a></li>
+                    <li><a href="#">Mundo</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+
+            <!-- ÁREA HERO (NOTÍCIA PRINCIPAL) -->
+            <section class="hero">
+                <div class="hero-card">
+                    <div class="hero-image">
+                        <img src="https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2026/06/2026-06-03T193A153A45Z-91524621.jpg?crop=1px,0px,1023px,682px&w=880&ver=f7a8cf5b" alt="Notícia principal">
+                    </div>
+                    <div class="hero-content">
+                        <span class="hero-category">Destaque</span>
+                        <h1 class="hero-title">Polícia chilena entra em confronto com estudantes que protestam contra presidente</h1>
+                        <p class="hero-resume">“Chega de cortes, não é ajuste, é roubo” ou “com os cortes, a saúde não passa de agosto” eram algumas das frases escritas nos cartazes erguidos pelos manifestantes.</p>
+                        <a href="noticias/chile/noticia-chile-protesto.html" class="btn-read-more">Ler mais →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ÚLTIMAS NOTÍCIAS (GRID) -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Últimas Notícias</h2>
+                    <a href="#" class="section-link">Ver todas →</a>
+                </div>
+                <div class="grid-cards" id="ultimasNoticiasGrid">
+                    <!-- JS preenche dinamicamente -->
+                </div>
+            </section>
+
+            <!-- NOTÍCIAS DO CHILE -->
+            <section class="section">
+                <div class="section-header">
+                    <h2 class="section-title">🇨🇱 Notícias do Chile</h2>
+                    <a href="#" class="section-link">Mais do Chile →</a>
+                </div>
+                <div class="grid-cards" id="chileNoticiasGrid"></div>
+            </section>
+
+            <!-- NOTÍCIAS DO BRASIL + SIDEBAR LAYOUT (DOIS LADOS) -->
+            <div class="two-columns">
+                <div class="content-main">
+                    <section class="section">
+                        <div class="section-header">
+                            <h2 class="section-title">🇧🇷 Notícias do Brasil</h2>
+                            <a href="#" class="section-link">Mais do Brasil →</a>
+                        </div>
+                        <div class="grid-cards" id="brasilNoticiasGrid"></div>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">📰 Mais Lidas</h3>
+                        <ul class="most-read-list" id="maisLidasList">
+                            <!-- JS dinâmico -->
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">📂 Categorias</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">Brasil</a><span>42</span></li>
+                            <li><a href="#">Chile</a><span>28</span></li>
+                            <li><a href="#">Economia</a><span>35</span></li>
+                            <li><a href="#">Tecnologia</a><span>19</span></li>
+                            <li><a href="#">Imigração</a><span>14</span></li>
+                            <li><a href="#">Mundo</a><span>31</span></li>
+                            <li><a href="#">Política</a><span>26</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget ad-space">
+                        <div class="ad-placeholder">
+                            <p>Publicidade</p>
+                            <span>Espaço reservado para anúncio</span>
+                        </div>
+                        <div class="ad-placeholder mt-16">
+                            <p>Publicidade</p>
+                            <span>Seu anúncio aqui</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- NEWSLETTER -->
+            <section class="newsletter">
+                <div class="newsletter-inner">
+                    <h2 class="newsletter-title">📬 Newsletter Suricatos</h2>
+                    <p>Receba as principais notícias do Brasil, Chile e do mundo diretamente no seu e-mail.</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" id="newsletterEmail" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn-newsletter">Inscrever-se</button>
+                    </form>
+                    <span id="formFeedback" class="feedback-msg"></span>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Suricatos Anônimos — Informação com seriedade e independência. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
