@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 resumo: "Governo chileno anuncia reforma legislativa que prorroga prazo de detenção de imigrantes em situação irregular de 5 para 180 dias, em meio a protestos e críticas de direitos humanos.", 
                 data: "04/06/2026", 
                 imagem: "img/noticias/pexels-daniel-cruz-170431136-13247360.jpg", 
-                link: "noticias/chile/noticia-imigracao-chile.html" 
+                link: "noticias/chile/luta-contra-imigracao.html" 
             },
             { 
                 id: 2, 
