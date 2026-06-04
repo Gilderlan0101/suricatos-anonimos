@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Página inicial -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Notícias do Chile -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/noticias/chile/noticia-chile-protesto.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/noticias/chile/luta-contra-imigracao.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/noticias/chile/index.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Notícias do Brasil -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/noticias/brasil/index.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Notícias de Economia -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/noticias/economia/index.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Páginas institucionais -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/contato.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/sobre.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/privacidade.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/termos.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Artigos -->
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/artigos/primeiro-artigo.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://Gilderlan0101.github.io/suricatos-anonimos/artigos/segundo-artigo.html</loc>
+    <lastmod>2026-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

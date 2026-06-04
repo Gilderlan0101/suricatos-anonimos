@@ -1,0 +1,39 @@
+# robots.txt para Suricatos Anônimos
+# Permite todos os bots de busca, mas com regras específicas
+
+User-agent: *
+Allow: /
+
+# Bloquear acesso a pastas desnecessárias
+Disallow: /assets/
+Disallow: /data/
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap
+Sitemap: https://Gilderlan0101.github.io/suricatos-anonimos/sitemap.xml
+
+# Regras para Googlebot (prioridade)
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Regras para Bing/Baidu/Yandex
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# Bloquear bots maliciosos conhecidos
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
