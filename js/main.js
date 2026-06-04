@@ -1,45 +1,127 @@
 // js/main.js
 document.addEventListener('DOMContentLoaded', () => {
-    // ========== DADOS MOCK (notícias realistas) ==========
+    // ========== DADOS DAS NOTÍCIAS (atualizado com notícias reais) ==========
     const noticias = {
         ultimas: [
-            { id: 1, categoria: "Política", titulo: "Governo anuncia nova faixa de isenção do IR para 2026", resumo: "Medida beneficiará milhões de brasileiros com renda até R$ 3.000 mensais.", data: "Hoje, 10h32", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=IR+2026", link: "#" },
-            { id: 2, categoria: "Tecnologia", titulo: "Startup chilena revoluciona armazenamento de energia renovável", resumo: "Solução inovadora promete reduzir custos em 40% para usinas solares.", data: "Ontem, 18h15", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Energia+Chile", link: "#" },
-            { id: 3, categoria: "Mundo", titulo: "Acordo comercial entre Mercosul e União Europeia é ratificado", resumo: "Blocos assinam tratado que deve movimentar bilhões em negócios.", data: "Ontem, 09h45", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Mercosul+UE", link: "#" },
-            { id: 4, categoria: "Imigração", titulo: "Novo visto para nômades digitais é aprovado no Chile", resumo: "Regulamentação atrai trabalhadores remotos com alta qualificação.", data: "13/02, 14h20", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Visto+Digital", link: "#" }
+            { 
+                id: 1, 
+                categoria: "Chile | Imigração", 
+                titulo: "Chile amplia detenção de imigrantes ilegais de 5 para 180 dias em nova investida do governo Kast", 
+                resumo: "Governo chileno anuncia reforma legislativa que prorroga prazo de detenção de imigrantes em situação irregular de 5 para 180 dias, em meio a protestos e críticas de direitos humanos.", 
+                data: "04/06/2026", 
+                imagem: "img/noticias/pexels-daniel-cruz-170431136-13247360.jpg", 
+                link: "noticias/chile/noticia-imigracao-chile.html" 
+            },
+            { 
+                id: 2, 
+                categoria: "Chile | Política", 
+                titulo: "Polícia chilena entra em confronto com estudantes que protestam contra presidente", 
+                resumo: "Manifestação em Santiago contra cortes fiscais do governo de José Antonio Kast termina em confrontos com a polícia, gás lacrimogêneo e dezenas de detidos.", 
+                data: "03/06/2026", 
+                imagem: "https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2026/06/2026-06-03T193A153A45Z-91524621.jpg?crop=1px,0px,1023px,682px&w=880&ver=f7a8cf5b", 
+                link: "noticias/chile/noticia-chile-protesto.html" 
+            },
+            { 
+                id: 3, 
+                categoria: "Economia", 
+                titulo: "Acordo comercial entre Mercosul e União Europeia é ratificado após longas negociações", 
+                resumo: "Blocos assinam tratado histórico que deve movimentar bilhões em negócios e reduzir tarifas entre os países.", 
+                data: "02/06/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Mercosul+UE", 
+                link: "#" 
+            },
+            { 
+                id: 4, 
+                categoria: "Tecnologia", 
+                titulo: "Startup chilena revoluciona armazenamento de energia renovável com tecnologia inovadora", 
+                resumo: "Solução promete reduzir custos em 40% para usinas solares e ampliar capacidade de armazenamento no deserto do Atacama.", 
+                data: "01/06/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Energia+Chile", 
+                link: "#" 
+            }
         ],
         chile: [
-            { id: 5, categoria: "Chile", titulo: "Desfile militar em Santiago celebra 200 anos do exército nacional", resumo: "Tradicional evento reúne milhares nas ruas da capital.", data: "Hoje, 11h00", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Chile+Fiestas", link: "#" },
-            { id: 6, categoria: "Economia", titulo: "Inflação no Chile registra queda pelo terceiro mês consecutivo", resumo: "BC chileno comemora indicador abaixo das projeções de mercado.", data: "12/02, 08h22", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Inflacion+Chile", link: "#" },
-            { id: 7, categoria: "Chile", titulo: "Atacama recebe novo observatório astronômico mais avançado do mundo", resumo: "Tecnologia de ponta reforça posição do país na pesquisa espacial.", data: "11/02, 16h45", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Atacama+Stars", link: "#" }
+            { 
+                id: 5, 
+                categoria: "Chile | Imigração", 
+                titulo: "Chile amplia detenção de imigrantes ilegais de 5 para 180 dias", 
+                resumo: "Governo Kast anuncia medida dura contra imigração irregular, elevando prazo de detenção para 180 dias.", 
+                data: "04/06/2026", 
+                imagem: "img/noticias/pexels-daniel-cruz-170431136-13247360.jpg", 
+                link: "noticias/chile/noticia-imigracao-chile.html" 
+            },
+            { 
+                id: 6, 
+                categoria: "Chile | Política", 
+                titulo: "Polícia entra em confronto com estudantes em protesto contra cortes fiscais", 
+                resumo: "Manifestantes enfrentam gás lacrimogêneo e jatos d'água em Santiago durante ato contra governo Kast.", 
+                data: "03/06/2026", 
+                imagem: "https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2026/06/2026-06-03T193A153A45Z-91524621.jpg?crop=1px,0px,1023px,682px&w=880&ver=f7a8cf5b", 
+                link: "noticias/chile/noticia-chile-protesto.html" 
+            },
+            { 
+                id: 7, 
+                categoria: "Chile | Economia", 
+                titulo: "Inflação no Chile registra queda pelo terceiro mês consecutivo", 
+                resumo: "Banco Central chileno comemora indicador abaixo das projeções de mercado, com alívio no custo de vida.", 
+                data: "02/06/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Inflacion+Chile", 
+                link: "#" 
+            }
         ],
         brasil: [
-            { id: 8, categoria: "Brasil", titulo: "Comissão aprova reforma tributária com foco em simplificação", resumo: "Novo texto unifica impostos sobre consumo e tramita na câmara.", data: "Hoje, 09h10", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Reforma+Tributária", link: "#" },
-            { id: 9, categoria: "Imigração", titulo: "Brasil amplia acolhida a venezuelanos e haitianos", resumo: "Operação abrigo chega a 5 mil novas vagas na região Norte.", data: "Ontem, 21h30", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Imigração+Brasil", link: "#" },
-            { id: 10, categoria: "Economia", titulo: "Dólar cai a R$ 5,60 com expectativa de investimentos estrangeiros", resumo: "Bolsas sobem e analistas melhoram previsões para o PIB.", data: "13/02, 12h05", imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Câmbio", link: "#" }
+            { 
+                id: 8, 
+                categoria: "Brasil | Economia", 
+                titulo: "Comissão aprova reforma tributária com foco em simplificação e justiça fiscal", 
+                resumo: "Novo texto unifica impostos sobre consumo e tramita na Câmara dos Deputados com expectativa de votação ainda neste semestre.", 
+                data: "03/06/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Reforma+Tributária", 
+                link: "#" 
+            },
+            { 
+                id: 9, 
+                categoria: "Brasil | Imigração", 
+                titulo: "Brasil amplia acolhida a venezuelanos e haitianos com novas vagas na região Norte", 
+                resumo: "Operação abrigo chega a 5 mil novas vagas para imigrantes em situação de vulnerabilidade na fronteira.", 
+                data: "01/06/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Imigração+Brasil", 
+                link: "#" 
+            },
+            { 
+                id: 10, 
+                categoria: "Brasil | Economia", 
+                titulo: "Dólar cai a R$ 5,60 com expectativa de investimentos estrangeiros", 
+                resumo: "Bolsas sobem e analistas melhoram previsões para o PIB brasileiro após anúncios do governo.", 
+                data: "30/05/2026", 
+                imagem: "https://placehold.co/600x400/2d2d2d/FFFFFF?text=Câmbio", 
+                link: "#" 
+            }
         ]
     };
 
-    // Mais Lidas estática
+    // Mais Lidas (atualizado com notícias reais do portal)
     const maisLidas = [
-        "Crise política no Chile: entenda os impactos na região",
-        "Governo brasileiro anuncia pacote de concessões em portos",
-        "Inteligência artificial já substitui rotinas no setor bancário",
-        "Imigração: novas regras para residência no Cone Sul",
-        "A economia circular e o futuro do agronegócio no Brasil"
+        "Chile amplia detenção de imigrantes ilegais de 5 para 180 dias",
+        "Polícia chilena entra em confronto com estudantes em Santiago",
+        "Acordo Mercosul-UE é ratificado após anos de negociação",
+        "Brasil amplia acolhida a venezuelanos e haitianos",
+        "Reforma tributária: comissão aprova texto com simplificação"
     ];
 
     // Função para criar card HTML
     function criarCard(noticia) {
         return `
             <article class="card">
-                <img class="card-img" src="${noticia.imagem}" alt="${noticia.titulo}" loading="lazy">
-                <div class="card-content">
-                    <span class="card-category">${noticia.categoria}</span>
-                    <h3 class="card-title">${noticia.titulo}</h3>
-                    <p class="card-summary">${noticia.resumo.substring(0, 100)}${noticia.resumo.length > 100 ? '...' : ''}</p>
-                    <div class="card-date">📅 ${noticia.data}</div>
-                </div>
+                <a href="${noticia.link}" style="text-decoration: none; color: inherit;">
+                    <img class="card-img" src="${noticia.imagem}" alt="${noticia.titulo}" loading="lazy">
+                    <div class="card-content">
+                        <span class="card-category">${noticia.categoria}</span>
+                        <h3 class="card-title">${noticia.titulo}</h3>
+                        <p class="card-summary">${noticia.resumo.substring(0, 100)}${noticia.resumo.length > 100 ? '...' : ''}</p>
+                        <div class="card-date">📅 ${noticia.data}</div>
+                    </div>
+                </a>
             </article>
         `;
     }
@@ -59,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Preencher mais lidas no sidebar
     const maisLidasList = document.getElementById('maisLidasList');
     if (maisLidasList) {
-        maisLidasList.innerHTML = maisLidas.map(item => `<li><a href="#">📌 ${item}</a></li>`).join('');
+        maisLidasList.innerHTML = maisLidas.map((item, index) => `<li><a href="#">📌 ${index + 1}. ${item}</a></li>`).join('');
     }
 
     // Menu Mobile Toggle
